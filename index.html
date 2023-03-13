@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Process Scheduler</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					
+					<span class="image avatar"><img src="images/processe.png" alt="" /></span>
+					<h1 id="logo"><a href="#">Process Scheduling Algorithms</a></h1>
+					<br />
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a class="icon solid fa-home" href="#one" class="active">Home</a></li>
+						<li><a class="icon solid fa-cog" href="#two">Process Scheduler</a></li>
+						<li><a class="icon solid fa-retweet" href="#three">Scheduling Algorithms</a></li>
+						
+					</ul>
+				</nav>
+				
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								
+								<div class="container">
+									<header class="major">
+										<h2>Process Scheduling Algorithms</h2>
+										
+									</header>
+									<p>CPU scheduling is a technique used by operating systems to manage the allocation of the CPU's processing time to the various processes or threads that are competing for it. A CPU scheduling algorithm is a method used by the operating system to determine which process should be given access to the CPU next. The selection process will be carried out by the CPU scheduler. It selects one of the processes in memory that are ready for execution.</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two">
+								<div class="container">
+									<h2>Process Scheduler</h2>
+											  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    
+        <h3>Algorithms : </h3>
+        <form id="algorithms">
+            <input type="radio" name="algo" id="fcfs" checked> <label for="fcfs">FCFS</label> <br>
+            <input type="radio" name="algo" id="sjf"> <label for="sjf">SJF</label> <br>
+            <input type="radio" name="algo" id="ljf"> <label for="ljf">LJF</label> <br>
+            <input type="radio" name="algo" id="rr"> <label for="rr">Round Robin</label> <br>
+            <input type="radio" name="algo" id="srjf"> <label for="srjf">SRTF</label> <br>
+            <input type="radio" name="algo" id="lrjf"> <label for="lrjf">LRTF</label> <br>
+            <input type="radio" name="algo" id="hrrn"> <label for="hrrn">HRRN</label> <br>
+        </form>
+        <br>
+        <table class="main-table">
+            <thead>
+                <tr>
+                    <th class="process-id">Process ID</th>
+                    <th class="priority hide">Priority</th>
+                    <th class="arrival-time">Arrival Time</th>
+                    <th class="process-time"colspan="1">Burst Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="process-id" rowspan="2">P1</td>
+                    <td class="priority hide" rowspan="2"><input type="number" min="1" step="1" value="1"></td>
+                    <td class="arrival-time" rowspan="2"><input type="number" min="0" step="1" value="0"> </td>
+                    <td class="process-time cpu process-heading" colspan="">CPU</td>
+                    
+                </tr>
+                <tr>
+                    <td class="process-time cpu process-input"><input type="number" min="1" step="1" value="1"> </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="time-quantum" class="hide">
+            <br>
+            <label for="tq">Time Quantum : </label>
+            <input type="number" name="Time Quantum" id="tq" min="1" step="1" value="2">
+        </div>
+        <br>
+        <button type="button" class="add-btn"><b>Add</b></button>
+        <button type="button" class="remove-btn"><b>Delete</b></button>
+        <button type="button" class="calculate"><b>Run</b></button>
+        <div id="output"></div>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="script.js"></script>
+
+			</div>
+
+				
+
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+									<h3>Scheduling Algorithms</h3>
+									<p>In a multi-tasking operating system, multiple processes may be running simultaneously, and the CPU must allocate time to each of these processes. The CPU scheduling algorithm plays a crucial role in determining how efficiently the system uses the CPU and how responsive it is to user requests.
+
+										CPU scheduling algorithms can be preemptive or non-preemptive. In preemptive algorithms, the currently executing process can be interrupted if a higher-priority process arrives or if the current process exceeds its allotted time slice. In non-preemptive algorithms, a process will continue to execute until it releases the CPU voluntarily.
+										
+										The performance of a CPU scheduling algorithm can be evaluated based on several metrics, such as turnaround time, waiting time, and response time. The goal is to minimize these metrics and ensure that the system is responsive and efficient. Different scheduling algorithms may be more suitable for different types of workloads, and the choice of algorithm may depend on factors such as system utilization, average process run time, and user requirements.</p>
+									<div class="features">
+										
+                                        <article>
+                                            
+											<div class="box">
+												<h4>First Come First Serve (FCFS)</h4>
+												<p>First-Come, First-Served (FCFS) is the simplest CPU scheduling algorithm, where the processes are executed in the order they arrive in the ready queue. The process that enters the queue first gets the CPU first, and the other processes wait in a queue until the currently running process completes its execution. In this type of algorithm, processes which requests the CPU first get the CPU allocation first. 
+This is managed with a FIFO queue.</p>
+											</div>
+                                                                     
+										</article>
+										<article>
+
+											<div class="box">
+												<h4>Shortest Job First (SJF)</h4>
+												<p>Shortest Job First is a scheduling policy that selects the waiting process with the smallest execution time to execute next. It is a non-preemptive and Greedy algorithm.
+Shortest Job first has the advantage of having a minimum average waiting time among all scheduling algorithms.
+It may cause starvation if shorter processes keep coming.</p>
+											</div>
+										</article>
+										<article>
+											
+											<div class="box">
+												<h4>Shortest Remaining Time First (SRTF)</h4>
+												<p>This Algorithm is the preemptive version of SJF scheduling. In SRTF, the execution of the process can be stopped after certain amount of time. 
+At the arrival of every process, the short term scheduler schedules the process with the least remaining burst time among the list of available processes and the running process.</p>
+											</div>
+										</article>
+                                        
+                            
+                                        
+                                        <article>
+											
+											<div class="box">
+												<h4>Highest Response Ratio Next (HRRN)</h4>
+												<p>Prerequisite – CPU Scheduling
+Given n processes with their Arrival times and Burst times, the task is to find average waiting time and average turn around time using HRRN scheduling algorithm.
+The name itself states that we need to find the response ratio of all available processes and select the one with the highest Response Ratio. 
+A process once selected will run till completion.</p>
+											</div>
+										</article>
+                                        
+                                         <article>
+											
+											<div class="box">
+												<h4>Longest Job First (LJF)</h4>
+												<p>Longest Job First is a non-preemptive scheduling algorithm. 
+This algorithm is based upon the burst time of the processes. 
+The processes are put into the ready queue based on their burst times i.e., in a descending order of the burst times. 
+As the name suggests this algorithm is based upon the fact that the process with the largest burst time is processed first.
+The burst time of only those processes is considered that have arrived in the system until that time.</p>
+											</div>
+										</article>
+                                        
+                                         <article>
+											
+											<div class="box">
+												<h4>Longest Remaining Time First (LRTF)</h4>
+												<p>Prerequisite – Process Management & CPU Scheduling
+This is a pre-emptive version of Longest Job First (LJF) scheduling algorithm. In this scheduling algorithm, we find the process with the maximum remaining time and then process it. 
+We check for the maximum remaining time after some interval of time(say 1 unit each) to check if another process having more Burst Time arrived up to that time.</p>
+											</div>
+										</article>
+                                        
+                                        <article>
+											
+											<div class="box">
+												<h4>Round Robin Scheduling</h4>
+												<p>Round Robin is the preemptive process scheduling algorithm.
+Each process is provided a fix time to execute, it is called a quantum.
+Once a process is executed for a given time period, it is preempted and other process executes for a given time period.
+Context switching is used to save states of preempted processes.</p>
+											</div>
+										</article>
+									</div>
+								</div>
+							</section>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+
+
+
+										
